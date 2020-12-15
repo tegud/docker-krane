@@ -24,4 +24,4 @@ RUN apk add --update \
   && rm -rf /var/cache/apk/* \
   && gem install krane --no-document -v 2.1.3
 
-CMD bash
+ENTRYPOINT ["krane"]
