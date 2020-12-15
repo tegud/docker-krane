@@ -18,7 +18,7 @@ RUN apk add --update \
   build-base \
   ca-certificates \
   gcc \
-  ruby \
+  ruby-full \
   ruby-bundler \
   ruby-dev \
   && rm -rf /var/cache/apk/* \
