@@ -22,6 +22,9 @@ RUN apk add --update \
   ruby-bundler \
   ruby-dev \
   && rm -rf /var/cache/apk/* \
-  && gem install krane --no-document -v 2.1.3
+  && gem install krane --no-document -v 2.1.3 
+  
+COPY ./entrypoint.sh ./
+RUN chmod +x ./entrypoint.sh
 
-ENTRYPOINT ["krane"]
+ENTRYPOINT ["./entrypoint.sh"]
