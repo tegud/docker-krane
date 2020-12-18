@@ -24,7 +24,7 @@ RUN apk add --update \
   && rm -rf /var/cache/apk/* \
   && gem install krane --no-document -v 2.1.3 
   
-COPY ./entrypoint.sh ./
-RUN chmod +x ./entrypoint.sh
+COPY ./entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
